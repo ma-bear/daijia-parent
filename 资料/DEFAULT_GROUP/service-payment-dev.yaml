@@ -44,8 +44,8 @@ spring:
         prefetch: 1 # 消费者每次从队列获取的消息数量。此属性当不设置时为：轮询分发，设置为1为：公平分发
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://139.198.104.58:3306/daijia_payment?characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.198.104.58:3306/daijia_payment?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: shangguigu@QY123
     hikari:

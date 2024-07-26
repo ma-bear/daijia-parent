@@ -40,8 +40,8 @@ spring:
     publisher-returns: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://139.198.104.58:3306/daijia_dispatch?characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.198.104.58:3306/daijia_dispatch?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: shangguigu@QY123
     hikari:

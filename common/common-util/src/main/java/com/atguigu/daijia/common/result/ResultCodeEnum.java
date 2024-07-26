@@ -22,6 +22,7 @@ public enum ResultCodeEnum {
     SIGN_ERROR(300, "签名错误"),
     SIGN_OVERDUE(301, "签名已过期"),
     VALIDATECODE_ERROR(218 , "验证码错误"),
+    WX_CODE_ERROR(210,"微信code错误"),
 
     LOGIN_AUTH(208, "未登陆"),
     PERMISSION(209, "没有权限"),
