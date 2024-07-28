@@ -25,7 +25,7 @@ public class CustomerInfoController {
 	}
 
 	@Operation(summary = "获取客户基本信息")
-	@GetMapping("/getCustomerInfo/{customerId}")
+	@GetMapping("/getCustomerLoginInfo/{customerId}")
 	public Result<CustomerInfo> getCustomerInfo(@PathVariable Long customerId) {
 		return Result.ok(customerInfoService.getById(customerId));
 	}

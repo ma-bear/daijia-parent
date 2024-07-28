@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 @SuppressWarnings({"unchecked", "rawtypes"})
 public class ProfitsharingRuleServiceImpl implements ProfitsharingRuleService {
 
-    @Autowired
-    private ProfitsharingRuleMapper rewardRuleMapper;
+//    @Autowired
+//    private ProfitsharingRuleMapper rewardRuleMapper;
 
 
 }

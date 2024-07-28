@@ -7,6 +7,7 @@ import com.atguigu.daijia.common.util.AuthContextHolder;
 import com.atguigu.daijia.customer.service.CustomerService;
 import com.atguigu.daijia.model.form.customer.UpdateWxPhoneForm;
 import com.atguigu.daijia.model.vo.customer.CustomerLoginVo;
+import com.atguigu.daijia.model.vo.order.CurrentOrderInfoVo;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
@@ -23,9 +24,6 @@ public class CustomerController {
 
     @Autowired
     private CustomerService customerService;
-
-    @Autowired
-    private RedisTemplate redisTemplate;
 
     @Operation(summary = "小程序授权登录")
     @GetMapping("/login/{code}")
@@ -50,5 +48,7 @@ public class CustomerController {
         //customerInfoService.updateWxPhoneNumber(updateWxPhoneForm);
         return Result.ok(true);
     }
+
+
 }
 

@@ -41,7 +41,7 @@ public class CustomerServiceImpl implements CustomerService {
         }
 
         String token = UUID.randomUUID().toString().replaceAll("_", "");
-        redisTemplate.opsForValue().set(RedisConstant.USER_LOGIN_REFRESH_KEY_PREFIX + token, customerId.toString(), RedisConstant.USER_LOGIN_KEY_TIMEOUT, TimeUnit.SECONDS);
+        redisTemplate.opsForValue().set(RedisConstant.USER_LOGIN_KEY_PREFIX + token, customerId.toString(), RedisConstant.USER_LOGIN_KEY_TIMEOUT, TimeUnit.SECONDS);
 
         return token;
     }
