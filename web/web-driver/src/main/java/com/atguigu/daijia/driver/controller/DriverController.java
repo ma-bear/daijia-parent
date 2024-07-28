@@ -5,6 +5,7 @@ import com.atguigu.daijia.common.result.Result;
 import com.atguigu.daijia.common.util.AuthContextHolder;
 import com.atguigu.daijia.driver.client.DriverInfoFeignClient;
 import com.atguigu.daijia.driver.service.DriverService;
+import com.atguigu.daijia.driver.service.OrderService;
 import com.atguigu.daijia.model.form.driver.DriverFaceModelForm;
 import com.atguigu.daijia.model.form.driver.UpdateDriverAuthInfoForm;
 import com.atguigu.daijia.model.vo.driver.DriverAuthInfoVo;
@@ -102,5 +103,7 @@ public class DriverController {
 //        Long driverId = AuthContextHolder.getUserId();
 //        return Result.ok(driverService.stopService(driverId));
 //    }
+
+
 }
 
