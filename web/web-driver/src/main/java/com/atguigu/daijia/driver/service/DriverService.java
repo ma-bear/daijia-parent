@@ -23,6 +23,10 @@ public interface DriverService {
     //人脸识别
     Boolean verifyDriverFace(DriverFaceModelForm driverFaceModelForm);
 
+    Boolean startService(Long driverId);
+
+    Boolean stopService(Long driverId);
+
 //    //开始接单服务
 //    Boolean startService(Long driverId);
 //
