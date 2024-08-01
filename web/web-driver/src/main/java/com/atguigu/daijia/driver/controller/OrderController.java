@@ -5,6 +5,7 @@ import com.atguigu.daijia.common.result.Result;
 import com.atguigu.daijia.common.util.AuthContextHolder;
 import com.atguigu.daijia.driver.service.OrderService;
 import com.atguigu.daijia.model.form.map.CalculateDrivingLineForm;
+import com.atguigu.daijia.model.form.order.OrderFeeForm;
 import com.atguigu.daijia.model.form.order.StartDriveForm;
 import com.atguigu.daijia.model.form.order.UpdateOrderCartForm;
 import com.atguigu.daijia.model.vo.driver.DriverInfoVo;
@@ -116,6 +117,15 @@ public class OrderController {
     @GetMapping("/getOrderServiceLastLocation/{orderId}")
     public Result<OrderServiceLastLocationVo> getOrderServiceLastLocation(@PathVariable Long orderId) {
         return Result.ok(orderService.getOrderServiceLastLocation(orderId));
+    }
+
+    @Operation(summary = "结束代驾服务更新订单账单")
+    @GuiguLogin
+    @PostMapping("/endDrive")
+    public Result<Boolean> endDrive(@RequestBody OrderFeeForm orderFeeForm) {
+        Long driverId = AuthContextHolder.getUserId();
+        orderFeeForm.setDriverId(driverId);
+        return Result.ok(orderService.endDrive(orderFeeForm));
     }
 }
 
