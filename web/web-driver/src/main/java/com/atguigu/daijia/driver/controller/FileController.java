@@ -18,27 +18,26 @@ import javax.swing.plaf.multi.MultiComboBoxUI;
 @RequestMapping("file")
 public class FileController {
 
-    @Autowired
-    private CosService cosService;
+//    @Autowired
+//    private CosService cosService;
 
     @Autowired
     private FileService fileService;
 
-    //文件上传接口
-    @Operation(summary = "上传")
-    @PostMapping("/upload")
-    public Result<String> upload(@RequestPart("file") MultipartFile file,
-                   @RequestParam(name = "path",defaultValue = "auth") String path) {
-        CosUploadVo cosUploadVo = cosService.uploadFile(file,path);
-        String showUrl = cosUploadVo.getShowUrl();
-        return Result.ok(showUrl);
-    }
-
+//    //文件上传接口
 //    @Operation(summary = "上传")
 //    @PostMapping("/upload")
-//    public Result<String> upload(@RequestPart("file") MultipartFile file) {
-//        String url = fileService.upload(file);
-//        return Result.ok(url);
+//    public Result<String> upload(@RequestPart("file") MultipartFile file,
+//                   @RequestParam(name = "path",defaultValue = "auth") String path) {
+//        CosUploadVo cosUploadVo = cosService.uploadFile(file,path);
+//        String showUrl = cosUploadVo.getShowUrl();
+//        return Result.ok(showUrl);
 //    }
+
+    @Operation(summary = "Minio文件上传")
+    @PostMapping("upload")
+    public Result<String> upload(@RequestPart("file") MultipartFile file) {
+        return Result.ok(fileService.upload(file));
+    }
 
 }

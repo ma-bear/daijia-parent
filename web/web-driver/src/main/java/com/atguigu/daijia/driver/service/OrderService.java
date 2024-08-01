@@ -1,10 +1,12 @@
 package com.atguigu.daijia.driver.service;
 
 import com.atguigu.daijia.model.form.map.CalculateDrivingLineForm;
+import com.atguigu.daijia.model.form.order.StartDriveForm;
 import com.atguigu.daijia.model.form.order.UpdateOrderCartForm;
 import com.atguigu.daijia.model.vo.driver.DriverInfoVo;
 import com.atguigu.daijia.model.vo.map.DrivingLineVo;
 import com.atguigu.daijia.model.vo.map.OrderLocationVo;
+import com.atguigu.daijia.model.vo.map.OrderServiceLastLocationVo;
 import com.atguigu.daijia.model.vo.order.CurrentOrderInfoVo;
 import com.atguigu.daijia.model.vo.order.NewOrderDataVo;
 import com.atguigu.daijia.model.vo.order.OrderInfoVo;
@@ -31,4 +33,8 @@ public interface OrderService {
     Boolean driverArriveStartLocation(Long orderId, Long driverId);
 
     Boolean updateOrderCart(UpdateOrderCartForm updateOrderCartForm);
+
+    Boolean startDrive(StartDriveForm startDriveForm);
+
+    OrderServiceLastLocationVo getOrderServiceLastLocation(Long orderId);
 }

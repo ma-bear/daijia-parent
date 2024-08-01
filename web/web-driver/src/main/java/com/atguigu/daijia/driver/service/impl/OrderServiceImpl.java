@@ -9,10 +9,12 @@ import com.atguigu.daijia.map.client.LocationFeignClient;
 import com.atguigu.daijia.map.client.MapFeignClient;
 import com.atguigu.daijia.model.entity.order.OrderInfo;
 import com.atguigu.daijia.model.form.map.CalculateDrivingLineForm;
+import com.atguigu.daijia.model.form.order.StartDriveForm;
 import com.atguigu.daijia.model.form.order.UpdateOrderCartForm;
 import com.atguigu.daijia.model.vo.driver.DriverInfoVo;
 import com.atguigu.daijia.model.vo.map.DrivingLineVo;
 import com.atguigu.daijia.model.vo.map.OrderLocationVo;
+import com.atguigu.daijia.model.vo.map.OrderServiceLastLocationVo;
 import com.atguigu.daijia.model.vo.order.CurrentOrderInfoVo;
 import com.atguigu.daijia.model.vo.order.NewOrderDataVo;
 import com.atguigu.daijia.model.vo.order.OrderInfoVo;
@@ -94,5 +96,15 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Boolean updateOrderCart(UpdateOrderCartForm updateOrderCartForm) {
         return orderInfoFeignClient.updateOrderCart(updateOrderCartForm).getData();
+    }
+
+    @Override
+    public Boolean startDrive(StartDriveForm startDriveForm) {
+        return orderInfoFeignClient.startDrive(startDriveForm).getData();
+    }
+
+    @Override
+    public OrderServiceLastLocationVo getOrderServiceLastLocation(Long orderId) {
+        return locationFeignClient.getOrderServiceLastLocation(orderId).getData();
     }
 }
