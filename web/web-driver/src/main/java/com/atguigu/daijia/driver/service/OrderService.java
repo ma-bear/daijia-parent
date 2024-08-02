@@ -11,6 +11,7 @@ import com.atguigu.daijia.model.vo.map.OrderLocationVo;
 import com.atguigu.daijia.model.vo.map.OrderServiceLastLocationVo;
 import com.atguigu.daijia.model.vo.order.CurrentOrderInfoVo;
 import com.atguigu.daijia.model.vo.order.NewOrderDataVo;
+import com.atguigu.daijia.model.vo.order.OrderBillVo;
 import com.atguigu.daijia.model.vo.order.OrderInfoVo;
 
 import java.util.List;
@@ -43,4 +44,6 @@ public interface OrderService {
     Boolean endDrive(OrderFeeForm orderFeeForm);
 
     PageVo findDriverOrderPage(Long driverId, Long page, Long limit);
+
+    Boolean sendOrderBillInfo(Long orderId, Long driverId);
 }

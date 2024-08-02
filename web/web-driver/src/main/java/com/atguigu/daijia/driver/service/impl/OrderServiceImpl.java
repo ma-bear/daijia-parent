@@ -11,7 +11,9 @@ import com.atguigu.daijia.driver.config.ThreadPoolConfig;
 import com.atguigu.daijia.driver.service.OrderService;
 import com.atguigu.daijia.map.client.LocationFeignClient;
 import com.atguigu.daijia.map.client.MapFeignClient;
+import com.atguigu.daijia.model.entity.order.OrderBill;
 import com.atguigu.daijia.model.entity.order.OrderInfo;
+import com.atguigu.daijia.model.enums.OrderStatus;
 import com.atguigu.daijia.model.form.map.CalculateDrivingLineForm;
 import com.atguigu.daijia.model.form.order.OrderFeeForm;
 import com.atguigu.daijia.model.form.order.StartDriveForm;
@@ -25,9 +27,7 @@ import com.atguigu.daijia.model.vo.driver.DriverInfoVo;
 import com.atguigu.daijia.model.vo.map.DrivingLineVo;
 import com.atguigu.daijia.model.vo.map.OrderLocationVo;
 import com.atguigu.daijia.model.vo.map.OrderServiceLastLocationVo;
-import com.atguigu.daijia.model.vo.order.CurrentOrderInfoVo;
-import com.atguigu.daijia.model.vo.order.NewOrderDataVo;
-import com.atguigu.daijia.model.vo.order.OrderInfoVo;
+import com.atguigu.daijia.model.vo.order.*;
 import com.atguigu.daijia.model.vo.rules.FeeRuleResponseVo;
 import com.atguigu.daijia.model.vo.rules.ProfitsharingRuleResponseVo;
 import com.atguigu.daijia.model.vo.rules.RewardRuleResponseVo;
@@ -35,6 +35,7 @@ import com.atguigu.daijia.order.client.OrderInfoFeignClient;
 import com.atguigu.daijia.rules.client.FeeRuleFeignClient;
 import com.atguigu.daijia.rules.client.ProfitsharingRuleFeignClient;
 import com.atguigu.daijia.rules.client.RewardRuleFeignClient;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import io.netty.util.concurrent.CompleteFuture;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -87,13 +88,29 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public OrderInfoVo getOrderInfo(Long orderId, Long driverId) {
+        //订单信息
         OrderInfo orderInfo = orderInfoFeignClient.getOrderInfo(orderId).getData();
-        if (!orderInfo.getDriverId().equals(driverId)) {
+        if(orderInfo.getDriverId().longValue() != driverId.longValue()) {
             throw new GuiguException(ResultCodeEnum.ILLEGAL_REQUEST);
         }
+
+        //账单信息
+        OrderBillVo orderBillVo = null;
+        //分账信息
+        OrderProfitsharingVo orderProfitsharing = null;
+        if (orderInfo.getStatus().intValue() >= OrderStatus.END_SERVICE.getStatus().intValue()) {
+            orderBillVo = orderInfoFeignClient.getOrderBillInfo(orderId).getData();
+
+            //获取分账信息
+            orderProfitsharing = orderInfoFeignClient.getOrderProfitsharing(orderId).getData();
+        }
+
+        //封装订单信息
         OrderInfoVo orderInfoVo = new OrderInfoVo();
         orderInfoVo.setOrderId(orderId);
         BeanUtils.copyProperties(orderInfo, orderInfoVo);
+        orderInfoVo.setOrderBillVo(orderBillVo);
+        orderInfoVo.setOrderProfitsharingVo(orderProfitsharing);
         return orderInfoVo;
     }
 
@@ -278,4 +295,10 @@ public class OrderServiceImpl implements OrderService {
     public PageVo findDriverOrderPage(Long driverId, Long page, Long limit) {
         return orderInfoFeignClient.findDriverOrderPage(driverId, page, limit).getData();
     }
+
+    @Override
+    public Boolean sendOrderBillInfo(Long orderId, Long driverId) {
+        return orderInfoFeignClient.sendOrderBillInfo(orderId, driverId).getData();
+    }
+
 }

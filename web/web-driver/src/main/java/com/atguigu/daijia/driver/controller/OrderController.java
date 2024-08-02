@@ -15,6 +15,7 @@ import com.atguigu.daijia.model.vo.map.OrderLocationVo;
 import com.atguigu.daijia.model.vo.map.OrderServiceLastLocationVo;
 import com.atguigu.daijia.model.vo.order.CurrentOrderInfoVo;
 import com.atguigu.daijia.model.vo.order.NewOrderDataVo;
+import com.atguigu.daijia.model.vo.order.OrderBillVo;
 import com.atguigu.daijia.model.vo.order.OrderInfoVo;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -142,6 +143,14 @@ public class OrderController {
         Long driverId = AuthContextHolder.getUserId();
         PageVo pageVo = orderService.findDriverOrderPage(driverId, page, limit);
         return Result.ok(pageVo);
+    }
+
+    @Operation(summary = "司机发送账单信息")
+    @GuiguLogin
+    @GetMapping("/sendOrderBillInfo/{orderId}")
+    public Result<Boolean> sendOrderBillInfo(@PathVariable Long orderId) {
+        Long driverId = AuthContextHolder.getUserId();
+        return Result.ok(orderService.sendOrderBillInfo(orderId, driverId));
     }
 }
 
