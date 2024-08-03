@@ -81,8 +81,9 @@
     <update id="updateReceiveCount">
         update coupon_info
         set receive_count = receive_count + 1
-        where id = #{id}
+        where id = #{couponId}
     </update>
+
 
     <update id="updateReceiveCountByLimit">
         update coupon_info
