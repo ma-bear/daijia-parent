@@ -16,7 +16,7 @@
 
 ### **核心业务流程图**
 
-![image-20240820152147687](https://github.com/xqboot/daijia-parent/blob/main/images\image-20240820152147687-1724143174050-2-1724146881535-5.png)
+![image-20240820152147687](https://github.com/xqboot/daijia-parent/blob/main/images/image-20240820152147687-1724143174050-2-1724146881535-5.png)
 
 
 
@@ -51,7 +51,7 @@
 
 ## **4 项目演示**
 
-![recording](https://github.com/xqboot/daijia-parent/blob/main/images\recording-1724147059646-115.gif)
+![recording](https://github.com/xqboot/daijia-parent/blob/main/images/recording-1724147059646-115.gif)
 
 
 
@@ -635,7 +635,7 @@ XXL-JOB是一个分布式任务调度平台，其核心设计目标是开发迅�
 
 解压：xxl-job-master.zip，导入idea，如图：
 
-![69016961678](https://github.com/xqboot/daijia-parent/blob/main/images\1690169616781-1724146881535-6.png)
+![69016961678](https://github.com/xqboot/daijia-parent/blob/main/images/1690169616781-1724146881535-6.png)
 
 项目结构说明：
 
@@ -681,7 +681,7 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 默认登录账号 “admin/123456”, 登录后运行界面如下图所示：
 
-![69017820961](https://github.com/xqboot/daijia-parent/blob/main/images\1690178209611-1724146881535-7.png)
+![69017820961](https://github.com/xqboot/daijia-parent/blob/main/images/1690178209611-1724146881535-7.png)
 
 ###### 步骤三：调度中心集群部署（可选）
 
@@ -838,7 +838,7 @@ public class XxlJobConfig {
 
 ###### 步骤一：配置执行器
 
-![69018192871](https://github.com/xqboot/daijia-parent/blob/main/images\1690181928710-1724146881535-9.png)
+![69018192871](https://github.com/xqboot/daijia-parent/blob/main/images/1690181928710-1724146881535-9.png)
 
 上面我们启动了xxl-job-executor-sample-springboot 执行器项目，当前已注册上来，我们执行使用改执行器。
 
@@ -861,11 +861,11 @@ AppName: 是每个执行器集群的唯一标示AppName, 执行器会周期性�
 
 任务管理 ==》 新增
 
-![69018006762](https://github.com/xqboot/daijia-parent/blob/main/images\1690180067623-1724146881535-8.png)
+![69018006762](https://github.com/xqboot/daijia-parent/blob/main/images/1690180067623-1724146881535-8.png)
 
 添加成功，如图：
 
-![69018012796](https://github.com/xqboot/daijia-parent/blob/main/images\1690180127960-1724146881535-10.png)
+![69018012796](https://github.com/xqboot/daijia-parent/blob/main/images/1690180127960-1724146881535-10.png)
 
 ###### 步骤三：执行器项目开发job方法
 
@@ -889,19 +889,19 @@ public void demoJobHandler() throws Exception {
 
 ###### 步骤四：启动任务
 
-![69018040084](https://github.com/xqboot/daijia-parent/blob/main/images\1690180400846-1724146881535-11.png)
+![69018040084](https://github.com/xqboot/daijia-parent/blob/main/images/1690180400846-1724146881535-11.png)
 
 任务列表状态改变，如图：
 
-![69018046414](https://github.com/xqboot/daijia-parent/blob/main/images\1690180464140-1724146881535-12.png)
+![69018046414](https://github.com/xqboot/daijia-parent/blob/main/images/1690180464140-1724146881535-12.png)
 
 设置断点，执行结果：
 
-![69018166550](https://github.com/xqboot/daijia-parent/blob/main/images\1690181665504-1724146881535-13.png)
+![69018166550](https://github.com/xqboot/daijia-parent/blob/main/images/1690181665504-1724146881535-13.png)
 
 查看调度日志：
 
-![69018267735](https://github.com/xqboot/daijia-parent/blob/main/images\1690182677356-1724146881535-14.png)
+![69018267735](https://github.com/xqboot/daijia-parent/blob/main/images/1690182677356-1724146881535-14.png)
 
 
 
@@ -923,7 +923,7 @@ MongoDB中每一条数据记录就是一个文档，`数据结构由键值(key=>
 
 文档类似于 JSON 对象，它的数据结构被叫做`BSON`（Binary JSON）。
 
-![img](https://github.com/xqboot/daijia-parent/blob/main/images\788db5ab-31c3-4fa4-bf9c-881c3d09ec54-1724146881535-15.png)
+![img](https://github.com/xqboot/daijia-parent/blob/main/images/788db5ab-31c3-4fa4-bf9c-881c3d09ec54-1724146881535-15.png)
 
 
 
@@ -1016,7 +1016,7 @@ quit() #退出命令行
 
 **客户端连接：**
 
-![69337734195](https://github.com/xqboot/daijia-parent/blob/main/images\1693377341958-1724146881535-16.png)
+![69337734195](https://github.com/xqboot/daijia-parent/blob/main/images/1693377341958-1724146881535-16.png)
 
 
 
@@ -1272,7 +1272,7 @@ public class FileUploadTest {
 
 注意：设置minio的中该桶的访问权限为public，如下所示：
 
-![image-20230515234445425](https://github.com/xqboot/daijia-parent/blob/main/images\image-20230515234445425-1724146881535-17.png)
+![image-20230515234445425](https://github.com/xqboot/daijia-parent/blob/main/images/image-20230515234445425-1724146881535-17.png)
 
 
 
@@ -1629,7 +1629,7 @@ public Boolean endDrive(OrderFeeForm orderFeeForm) {
 
 mysql默认的事务隔离级别为repeatable-read
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_DBSapxVIGA-1724146881535-18.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_DBSapxVIGA-1724146881535-18.png)
 
 #### 1.6、事务传播行为（propagation behavior）
 
@@ -1661,7 +1661,7 @@ Spring定义了七种传播行为：参考 TransactionDefinition类
   - 会用到数据库锁
 - 起初，事务仅限于对单一数据库资源的访问控制，架构服务化以后，事务的概念延伸到了服务中。倘若将一个单一的服务操作作为一个事务，那么整个服务操作只能涉及一个单一的数据库资源，这类**基于**单个服务单一数据库**资源访问的事务，被称为本地事务(Local Transaction)**。
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_1_2bmRgG83FM-1724146881535-19.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_1_2bmRgG83FM-1724146881535-19.png)
 
 
 
@@ -1671,15 +1671,15 @@ Spring定义了七种传播行为：参考 TransactionDefinition类
 
 - 首先，传统的**单体应用（Monolithic App）**，通过 3 个 Module，在同一个数据源上更新数据来完成一项业务。很自然的，整个业务过程的**数据一致性**由**本地事务**来保证。
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_2_ZS5EDNceeo-1724146881535-20.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_2_ZS5EDNceeo-1724146881535-20.png)
 
 - 随着业务需求和架构的变化，**单体应用被拆分为微服务**：原来的 3 个 Module 被拆分为 3 个独立的服务，分别使用独立的数据源。业务过程将由 3 个服务的调用来完成。
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_3_uRp3PBs3Ka-1724146881535-21.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_3_uRp3PBs3Ka-1724146881535-21.png)
 
 - 此时，每一个服务内部的数据一致性仍由本地事务来保证。而整个业务层面的全局数据一致性要如何保障呢？这就是微服务架构下面临的，典型的分布式事务需求：我们需要一个分布式事务的解决方案保障业务全局的数据一致性。
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_4_l0qm0VIoEj-1724146881535-22.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_4_l0qm0VIoEj-1724146881535-22.png)
 
 #### 2.2、什么是分布式事务
 
@@ -1718,7 +1718,7 @@ Spring定义了七种传播行为：参考 TransactionDefinition类
 
 一个服务操作调用另一个服务，这时事务需要跨越多个服务。在这种情况下，起始服务的事务在调用另外一个服务的时候，需要以某种机制流转到另外一个服务，从而使被调用的服务访问的资源也自动加入到该事务当中来。这就需要跨服务跨数据库的全局事务进行数据一致性的保证。
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_5_t3E5cx2soD-1724146881536-25.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_5_t3E5cx2soD-1724146881536-25.png)
 
 较之基于单一数据库资源访问的本地事务，分布式事务的应用架构更为复杂。在不同的分布式应用架构下，实现一个分布式事务要考虑的问题并不完全一样，比如对多资源的协调、事务的跨服务传播等，实现机制也是复杂多变。
 
@@ -1810,7 +1810,7 @@ XA协议：XA是一个分布式事务协议。XA中大致分为两部分：**事
 
 2PC中包含着两个角色：\*\*事务协调者\*\*和\*\*事务参与者\*\*。让我们来看一看他们之间的交互流程：
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_6_5fJBL98sLM-1724146881536-23.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_6_5fJBL98sLM-1724146881536-23.png)
 
 在分布式事务的第一阶段，作为事务协调者的节点会首先向所有的参与者节点发送Prepare请求。
 
@@ -1820,7 +1820,7 @@ XA协议：XA是一个分布式事务协议。XA中大致分为两部分：**事
 
 **第二阶段：**
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_7_31p4P-FIYl-1724146881536-24.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_7_31p4P-FIYl-1724146881536-24.png)
 
 在2PC分布式事务的第二阶段，如果事务协调节点在之前所收到都是正向返回，那么它将会向所有事务参与者发出Commit请求。
 
@@ -1832,11 +1832,11 @@ XA协议：XA是一个分布式事务协议。XA中大致分为两部分：**事
 
 **第一阶段：**
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_8_Ueo-7XP2YE-1724146881536-26.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_8_Ueo-7XP2YE-1724146881536-26.png)
 
 **第二阶段：**
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_9_XSy1jA8dpt-1724146881536-28.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_9_XSy1jA8dpt-1724146881536-28.png)
 
 在2PC的第一阶段，如果某个事务参与者反馈失败消息，说明该节点的本地事务执行不成功，必须回滚。
 
@@ -1870,13 +1870,13 @@ TCC的作用主要是解决跨服务调用场景下的分布式事务问题
 
 准备从合肥出发，到云南大理去游玩，然后使用美团App(机票代理商)来订机票。发现没有从合肥直达大理的航班，需要到昆明进行中转。如下图：
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_10_veUMpNEaN8-1724146881536-29.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_10_veUMpNEaN8-1724146881536-29.png)
 
 从图中我们可以看出来，从合肥到昆明乘坐的是四川航空，从昆明到大理乘坐的是东方航空。
 
  由于使用的是美团App预定，当我选择了这种航班预定方案后，美团App要去四川航空和东方航空各帮我购买一张票。如下图：
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_11_dorvIpjgPi-1724146881536-27.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_11_dorvIpjgPi-1724146881536-27.png)
 
 考虑最简单的情况：美团先去川航帮我买票，如果买不到，那么东航也没必要买了。如果川航购买成功，再去东航购买另一张票。
 
@@ -1886,7 +1886,7 @@ TCC的作用主要是解决跨服务调用场景下的分布式事务问题
 
  两个航空公司都为美团提供以下3个接口：**机票预留接口、确认接口、取消接口**。美团App分2个阶段进行调用，如下所示：
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_12_69i9kjZ-Mo-1724146881536-30.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_12_69i9kjZ-Mo-1724146881536-30.png)
 
 **在第1阶段：**
 
@@ -1906,7 +1906,7 @@ TCC的作用主要是解决跨服务调用场景下的分布式事务问题
 
 具体流程：
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_13_eeaoEFRsEj-1724146881536-31.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_13_eeaoEFRsEj-1724146881536-31.png)
 
 TCC是Try ( 尝试 ) — Confirm(确认) — Cancel ( 取消 ) 的简称:
 
@@ -1932,7 +1932,7 @@ TCC是业务层面的分布式事务，最终一致性，不会一直持有资�
 
 - 订单系统新增一条消息表，将新增订单和新增消息放到一个事务里完成，然后通过轮询的方式去查询消息表，将消息推送到 MQ，库存系统去消费 MQ。
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_14_QGUcikslqc-1724146881536-33.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_14_QGUcikslqc-1724146881536-33.png)
 
 - 执行流程：
   - 订单系统，添加一条订单和一条消息，在一个事务里提交。
@@ -1982,7 +1982,7 @@ Seata全称：Simple Extensible Autonomous Transaction Architecture,简单可扩
 
 如下图所示：
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_16_yy7mgWiiFD-1724146881536-34.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_16_yy7mgWiiFD-1724146881536-34.png)
 
 下面是一个分布式事务在Seata中的执行流程：
 
@@ -2001,7 +2001,7 @@ Seata 中有三大模块，分别是 TM、RM 和 TC。 其中 TM 和 RM 是作�
 
 Seata还支持MT模式。MT模式本质上是一种TCC方案，业务逻辑需要被拆分为 Prepare/Commit/Rollback 3 部分，形成一个 MT 分支，加入全局事务。如图所示：
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\tcc-1724146881536-32.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/tcc-1724146881536-32.png)
 
 MT 模式一方面是 AT 模式的补充。另外，更重要的价值在于，通过 MT 模式可以把众多非事务性资源纳入全局事务的管理中。
 
@@ -2011,7 +2011,7 @@ MT 模式一方面是 AT 模式的补充。另外，更重要的价值在于，�
 
 #### 4.1、再看TC/TM/RM三大组件
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_35_UAj1MYO6FQ-1724146881536-36.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_35_UAj1MYO6FQ-1724146881536-36.png)
 
 #### 4.2、分布式事务的执行流程
 
@@ -2031,13 +2031,13 @@ MT 模式一方面是 AT 模式的补充。另外，更重要的价值在于，�
   - 3.其保存成“after image”，最后生成行锁。
 - 以上操作全部在一个数据库事务内完成，这样保证了一阶段操作的原子性。
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_38_EB06uJVw2I-1724146881536-35.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_38_EB06uJVw2I-1724146881536-35.png)
 
 ##### 4.3.2、二阶段提交
 
 - 二阶段如果顺利提交的话，因为“业务SQL”在一阶段已经提交至数据库，所以Seata框架只需将一阶段保存的快照数据和行锁删掉，完成数据清理即可。
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_39_5lNHgn0ybu-1724146881536-37.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_39_5lNHgn0ybu-1724146881536-37.png)
 
 ##### 4.3.3、二阶段回滚
 
@@ -2045,7 +2045,7 @@ MT 模式一方面是 AT 模式的补充。另外，更重要的价值在于，�
 
 回滚方式便是用“before image”还原业务数据；但在还原前要首先校验脏写，对比“数据库当前业务数据”和“after image”,如果两份数据完全一致就说明没有脏写，可以还原业务数据，如果不一致就说明有脏写，出现脏写就需要转人工处理。
 
-![](https://github.com/xqboot/daijia-parent/blob/main/images\image_40_Y67Xy72vPH-1724146881536-39.png)
+![](https://github.com/xqboot/daijia-parent/blob/main/images/image_40_Y67Xy72vPH-1724146881536-39.png)
 
 
 
@@ -2066,9 +2066,9 @@ MT 模式一方面是 AT 模式的补充。另外，更重要的价值在于，�
 
 **到Seata官网下载安装文件**
 
-![image-20240320093120065](https://github.com/xqboot/daijia-parent/blob/main/images\image-20240320093120065-1724146881537-40.png)
+![image-20240320093120065](https://github.com/xqboot/daijia-parent/blob/main/images/image-20240320093120065-1724146881537-40.png)
 
-![image-20240320093633784](https://github.com/xqboot/daijia-parent/blob/main/images\image-20240320093633784-1724146881536-38.png)
+![image-20240320093633784](https://github.com/xqboot/daijia-parent/blob/main/images/image-20240320093633784-1724146881536-38.png)
 
 ### 2 在使用Seata的相关模块引入依赖
 
